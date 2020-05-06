@@ -247,7 +247,7 @@ Frame Root [
 XF = XF.replace("[","{")
 XF = XF.replace("]","}")
 
-XFileAddress = "../data/" + ConvertFile[1][:-4] + "x"
+XFileAddress = "ConvertedFiles/" + ConvertFile[1][:-4] + "x"
 
 with open(XFileAddress,'w') as X_File:
     print(X_File.write(XF))
