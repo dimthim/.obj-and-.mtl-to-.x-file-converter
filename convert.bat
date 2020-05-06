@@ -1,8 +1,14 @@
 @echo off
-X:
-cd \3dGame\misc\TempFiles
+c:
+cd ..\..\..\..\..\..\..\..\..\..\..\..\..\..
+cd PythonProjects\FileConverter\TempFiles
 dir/b> ..\ConvertMe.txt
-cd ..
+cd  .. 
 py FileConverter.py
-del /Q Tempfiles
+cd ConvertedFiles
+MOVE *.x x:\3dGame\Data
+cd..
+del /Q ConvertedFiles
+del /Q TempFiles
 del ConvertMe.txt
+x:
