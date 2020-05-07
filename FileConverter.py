@@ -1,8 +1,3 @@
-# read in <2.8 blender export file type>
-
-
-# open(filename,mode) (optional second parameter, defaults to 'r'
-# <mode> can be 'r' (read-only), 'w' (write-only), 'a' (append), 'r+' (read and write)
 with open("ConvertMe.txt") as read_data:
     ConvertFile = read_data.readlines()
 
@@ -219,20 +214,7 @@ while True:
         else:
             TString += "; ".join(i) + ";,\n"
         Loops += 1
-    
-    #FaceTString = ""
-    #Loops = 0
-    #TCornerString = ""
-    #for i in FaceT:
-    #    TCornerString = str(FaceCorner[Loops]) + ";"
-    #    if Loops == (FaceNum - 1):
-    #        FaceTString += TCornerString + ",".join(i) + ";;"
-    #    else:
-    #        FaceTString += TCornerString + ",".join(i) + ";,\n"
-    #    Loops += 1
-    
-    
-    
+
     Loops = 1
     MatIString = ""
     for i in FaceMaterial:
@@ -331,51 +313,3 @@ XFileAddress = "ConvertedFiles/" + ConvertFile[1][:-4] + "x"
 with open(XFileAddress,'w') as X_File:
     print(X_File.write(XF))
 print(XF)
-
-
-#print(XF)
-
-
-
-# pass .obj and .mtl files into script
-# write XF to an .x file in desired location
-
-
-# have .obj and .mtl files in a directory that the path knows to look in
-# look in the directory, send those file names as variables to scipt
-# at end of script, send write XF to a .x file in the same location as my other game assets
-
-
-
-
-        
-###    VERTICES
-### number of vertices in each mesh in file 
- ### 3d pos each vertex 
-### number of faces on polygon
-### number of corners each faces has
-### list of indices which correspond to the corners of each face
-###     NORMALS
-### number of unique normals in each mesh
-### list of all 3d normals
-### list of indices that correspond to the normals of each vertex on a face
-###    MESH TEXTURE COORDS
-### number total vertices in mesh
-### 2D UV coordinates for each vertex
-###    MESH MATERIAL LIST
-### Number of materials used in mesh
-### Number of faces in mesh
-### index that tell which material was used for which face
-###    MATERIAL OBJECT
-### Material ID
-### material RGBA value
-### ??? value (96.0784)
-### ??? 3d value (0.5)
-### ??? 3d value (0.000)
-### (Texture file name)
-
-# each time it finds a block of relevant infomation, copy that block of information to your <.x file data struct>
-# loop through the filled out data struct, writing all of the relevant information to an .x file in the appropriate order
-# the end?
-
-
