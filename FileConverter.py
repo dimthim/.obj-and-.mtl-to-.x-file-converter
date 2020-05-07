@@ -21,7 +21,6 @@ with open(ObjFileAddress) as read_data:
     
 FrontMatter = "xof 0303txt 0032\n"
 MiddleMatter = ""
-FirstLoop = True
 TotalLoops = 0
 GlobalV = 0
 GlobalN = 0
@@ -206,7 +205,6 @@ while True:
             TI += 1
     
     Loops = 1
-    #TString = "0.625000; 0.500000;,\n"
     TString = ""
     for i in TCoords:
         if Loops == TotalCorners:
